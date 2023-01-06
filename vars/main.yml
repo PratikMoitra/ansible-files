@@ -3,6 +3,7 @@
 zt_network_id: 8bd5124fd6e39fcc
 package_lists:
   - neofetch
+  - cron
   - mtr
   - curl
   - nmap
