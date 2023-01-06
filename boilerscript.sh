@@ -2,13 +2,15 @@
 
 # Install Ansible on Arch Linux
 if [ -f /etc/arch-release ]; then
-    sudo pacman -S ansible git
+    sudo pacman -S ansible 
+    sudo pacman -S git
 fi
 
 # Install Ansible on Debian/Ubuntu
 if [ -f /etc/debian_version ]; then
     sudo apt update
-    sudo apt install git ansible -y
+    sudo apt install ansible -y
+    sudo apt install git -y
 fi
 
 # Install ansible on macOS
