@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Install Ansible on Arch Linux
