@@ -15,7 +15,8 @@ fi
 
 # Install ansible on macOS
 if [ "$(uname)" == "Darwin" ]; then
-    brew install ansible git
+    brew install ansible
+    brew install git
 fi
 
 # Run ansible-pull command to execute an ansible script. 
