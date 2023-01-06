@@ -16,6 +16,7 @@
       name: "{{ item }}"
       state: latest
     loop: "{{ package_lists }}"
+    remote_src: true
     
 
 
