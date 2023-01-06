@@ -19,11 +19,4 @@
     group: root
     mode: 0440
 
-- name: adding tmux config files
-  tags: tmux
-  copy:
-    src: .tmux.conf
-    dest: /home/senseble
-    owner: senseble
-    group: senseble
-    mode: 0644
+
