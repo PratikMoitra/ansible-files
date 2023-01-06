@@ -1,0 +1,29 @@
+- name: create senseble user
+  user:
+    name: senseble
+    groups: root
+     
+- name: add ssh key for senseble
+  tags: always
+  authorized_key:
+    user: senseble
+    state: present
+    key: https://raw.githubusercontent.com/PratikMoitra/HomeAnsible/main/files/senseble_pubkeys
+
+- name: add sudoers file for senseble
+  tags: always
+  copy:
+    src: sudoer_senseble
+    dest: /etc/sudoers.d/senseble
+    owner: root
+    group: root
+    mode: 0440
+
+- name: adding tmux config files
+  tags: tmux
+  copy:
+    src: .tmux.conf
+    dest: /home/senseble
+    owner: senseble
+    group: senseble
+    mode: 0644

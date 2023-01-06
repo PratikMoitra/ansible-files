@@ -1,0 +1,18 @@
+---
+# vars file for required_apps
+zt_network_id: 8bd5124fd6e39fcc
+package_lists:
+  - neofetch
+  - mtr
+  - curl
+  - nmap
+  - bpython
+  - mc
+  - samba
+  - syncthing
+  - rclone
+  - rsync
+  - tmux
+  - git
+  - python3
+  - python3-pip

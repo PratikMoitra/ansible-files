@@ -1,0 +1,26 @@
+- name: Install packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ package_lists }}"
+
+- name: "Install Zerotier"
+  ansible.builtin.script: $(which curl) -s https://install.zerotier.com/ | sudo bash
+
+- name: Enable and start Zerotier service
+  service:
+    name: zerotier-one
+    state: started
+    enabled: yes
+
+- name: Join Zerotier network
+  ansible.builtin.shell: zerotier-cli join {{ zt_network_id }}
+  register: join_output
+  ignore_errors: true
+  # dependencies:
+  #   - "Install Zerotier"
+
+- name: Debug output
+  debug:
+    var: join_output
+  when: join_output.stdout is defined

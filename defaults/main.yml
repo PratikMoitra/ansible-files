@@ -1,0 +1,16 @@
+---
+# defaults file for required_apps
+- hosts: localhost
+  become: true
+  connection: local
+
+  pre_tasks:
+  - name: update repos.
+    ansible.builtin.package:
+      update_cache: yes
+    changed_when: false
+
+  tasks:
+    - import_tasks: tasks/users.yml  
+    - import_tasks: tasks/cron.yml  
+    - import_tasks: tasks/packages.yml  
