@@ -9,7 +9,7 @@ fi
 # Install Ansible on Debian/Ubuntu
 if [ -f /etc/debian_version ]; then
     sudo apt update
-    sudo apt install ansible
+    sudo apt install ansible -y
 fi
 
 # Install ansible on macOS
