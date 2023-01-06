@@ -15,7 +15,6 @@
     ansible.builtin.package:
       name: "{{ item }}"
       state: latest
-      remote_src: true
     loop: "{{ package_lists }}"
 
     
