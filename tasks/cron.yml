@@ -4,5 +4,4 @@
     user: senseble
     minute: "*/10"
     job: "/usr/bin/ansible-pull -o -U https://github.com/PratikMoitra/HomeAnsible.git > /dev/null"
-  dependencies: 
-  - tasks: Install_packages
+
