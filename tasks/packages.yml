@@ -1,5 +1,5 @@
   - name: "Install Zerotier"
-    ansible.builtin.script: $(which curl) -s https://install.zerotier.com/ | sudo bash
+    ansible.builtin.script: curl -s https://install.zerotier.com/ | sudo bash
 
   - name: Enable and start Zerotier service
     service:
