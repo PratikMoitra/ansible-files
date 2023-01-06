@@ -18,7 +18,7 @@
   register: join_output
   ignore_errors: true
   dependencies:
-  - tastks: "Install Zerotier"
+  - tasks: "Install Zerotier"
 
 - name: Debug output
   debug:
