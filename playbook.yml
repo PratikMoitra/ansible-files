@@ -16,6 +16,8 @@
       name: "{{ item }}"
       state: latest
     loop: "{{ package_lists }}"
+    
+
 
   tasks:
     - import_tasks: tasks/users.yml  
